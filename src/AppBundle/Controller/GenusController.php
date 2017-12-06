@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -18,5 +19,14 @@ class GenusController extends Controller
             'name'      => $name,
             'values'    => ['Freedom', 'Accountability', 'Energy', 'Attitude']
         ]);
+    }
+
+    /**
+     * @Route("/genus/{name}/notes")
+     * @Method("GET")
+     */
+    public function getNotesAction()
+    {
+
     }
 }
